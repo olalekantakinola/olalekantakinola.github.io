@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Poverty Distribution</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Home Page</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									
+									<h1>Poverty Distribution</h1>
+									<p>Short-Term neigborhood changes<br />
+                                    in San Francisco-Oakland-Berkely, CA MSA</p>
+								</header>
+                                <p>I chose to explore the metro area of San Francisco-Oakland-Berkeley and analyze: 1) The RDI and number of ghettos 2) The presence of spatial autocorrelation 3) The different poverty levels and movements of tracts from high poverty to low poverty and vice versa 4) Relationship between income and race 5) Tipping like behaviour in our selected metro area. </p>
+								<div class="image main"><img src="images/Povshare1.jpg" alt="" /></div>
+								<p>The map shows the share of poverty is all tracts in different years, 2012 and 2019.</p>
+								<p>Racial Dissimilarity Index 2012-2019<br />
+                                The Racial Dissimilarity Index measures the percentage of the non-hispanic white population in a county which would have to change Census tracts to equalize the racial distribution between white and non-white population groups across all tracts in the county.</p>
+                                <p> RDI for 2012 is 63.2% and for 2019 is 60.5%. There is a decrease in RDI in 2019 and 2012. This RDI value means that 63.2% of blacks in 2012 and 60.5% of blacks in 2019 would need to move to neighborhoods predominantly white to achieve a balance. A balance means that the share of blacks are equal to the share of whites and all other races in the MSA. We would have a balance if 7.97% of blacks in 2012 and 7.08% of blacks in 2019 are present in all CA census tracts.</p>
+                                <div class="image main"><img src="images/povshare2.jpg" alt="" /></div>
+                                <p>Modeling the proximity of the spatial weight matrix using the first-order contiguity weights (both rook and queen method) does not work because there are spatial gaps in our MSA in which not all census tracts and neighborhoods are connected to each other with a border. This resulted in empty neighbor sets when we used this proximity model, which depends on shared borders between neighborhoods.
+
+                                    Therefore, we chose to model the proximity using the distance-based criterion. We used the knearigh() function. We let k = 10 to analyze the 10 nearest neighbors, then we transformed the knn object into a neighbors list (nb) using the function knn2nb().
+                                    
+                                    Modeling Proximity Using Distance-Based Criterion</p>
+                                    
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class="split contact">
+							
+				
+							<section>
+								
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
